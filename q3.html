@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const array1 = [
+            [1, 2],
+            [3, 4]
+        ];
+
+        const array2 = [
+            [5, 6],
+            [7, 8]
+        ];
+
+        const mergedArray = mergeArrays(array1, array2);
+
+        function mergeArrays(arr1, arr2) {
+
+            if (arr1[0].length !== arr2[0].length) {
+                throw new Error("Arrays have different number of columns");
+            }
+
+            const mergedArray = [...arr1, ...arr2];
+            return mergedArray;
+        }
+
+        console.log("Merged Array:", mergedArray);
+
+    </script>
+</body>
+
+</html>
